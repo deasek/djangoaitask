@@ -19,8 +19,10 @@
 
 <script>
     const btn = document.getElementById('submit-id-save_text');
-    btn.addEventListener('click', function handleClick() {
+    const form = document.getElementById('inputform');
+    form.addEventListener('submit', function handleClick() {
         btn.value = 'Please wait...';
+        btn.disabled = true;
     });
 </script>
 </body>

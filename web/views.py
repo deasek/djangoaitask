@@ -20,7 +20,7 @@ class AddTextView(FormView):
         cleaned_data = form.cleaned_data
         try:
             self.summary = Summary.parse_input_file(cleaned_data['input_file'])
-        except:
+        except Exception:
             raise ValidationError('Invalid data')
         return super().form_valid(form)
 

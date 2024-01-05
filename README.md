@@ -20,4 +20,4 @@ http://localhost:8001/admin/core/summary/
 
 
 ## Code quality, formatting and linters
-To run linter and code formatter (`ruff`) run: `docker compose exec app python3 ruff .`
+To run linter and code formatter (`ruff`) run: `docker compose exec app ruff .`
