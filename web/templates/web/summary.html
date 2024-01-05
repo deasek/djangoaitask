@@ -1,0 +1,36 @@
+{% extends 'web/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="summary_detail">
+        <a href="{% url 'web:index' %}">Go back</a>
+        <h1>Summary #{{ object.id }}</h1>
+        <table class="table table-borderless">
+            {% for chunk in object.chunks.all %}
+                <tr>
+                    <td>
+                        {{ chunk.chunk_text }}
+                    </td>
+                    <td>
+                        <div class="summary">
+                            <strong>Summary:</strong>
+                            <div>
+                                {{ chunk.summary_text }}
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="2">
+                    <div class="summary">
+                        <strong>Summary of whole text:</strong>
+                        <div>
+                            {{ object.summary_text }}
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
