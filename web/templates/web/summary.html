@@ -9,7 +9,7 @@
             {% for chunk in object.chunks.all %}
                 <tr>
                     <td>
-                        {{ chunk.chunk_text }}
+                        {{ chunk.chunk_text|linebreaksbr }}
                     </td>
                     <td>
                         <div class="summary">
